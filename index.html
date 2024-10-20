@@ -1,11 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="es"><!-- Un atributo significa algo sobre ese elemento en este caso establecemos el idioma español  -->
+<head> <!-- en el head van los elementos detras de escena, estilos-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bracket Master</title>
+    <link rel="stylesheet" href="./CSS/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" /> <!--Sirve para importar iconos-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"><!--Importar fuente de letra escogida en google fonts-->
 </head>
-<body>
-    <h1>Hola mundo soy David Vega</h1>
+<body><!-- El h1 significa heading que seria un encabezado, el numero representa la importancia del encabezado-->
+    <header>
+        <div id="divpapa">
+            <div class="hijo1">
+                <img src="./img/bracketmaster.png">
+            </div><!--Son como cajas que contienen cosas-->
+            <div id = "hijo2">
+                <ul>
+                    <li><a href="">Inicio</a></li><!--Un elemento de la lista y la a sirve para redireccionar a otra pantalla-->
+                    <li><a href="">Crew Battles</a></li><!--la letra a sirve para que el elemento nos redireccione a otra pantalla-->
+                    <li><a href="">Baneos</a></li>
+                    <li><a href="">Bracket</a></li>
+                    <li><a href="">Generador top 8</a></li>
+                    <li><a href="">Historia</a></li>
+                </ul><!--Lista-->
+            </div><!--En este div estaran las diversas opciones de la pagina-->
+            <div class="hijo1">
+                <button>Ingresar2</button>
+                <i class="fa-solid fa-magnifying-glass" style="color: white;"></i><!--Esto se coloca para colocar iconos viene de fontawesome-->
+            </div>
+        </div>
+    </header><!--Es la parte superior de una pagina web-->
 </body>
-</html>
+</html> <!-- Este es el elemento raíz donde van todo los demas cuerpos-->
