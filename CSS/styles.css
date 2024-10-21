@@ -2,27 +2,69 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: "Chakra Petch", sans-serif;
-}
-body{
-    background-color: grey;
     /*para importar la tipografia para la pagina*/
     font-family: "Chakra Petch", sans-serif;
     /*Para poner la imagen de fondo*/
-    background-image: url('../img/montañas.webp');
+}
+body{
+    background-image: url('../img/neo1.jpg');
+    background-color: rgba(0, 0, 0, 0.75);
+    background-blend-mode: multiply;
     background-size: cover; /* Para que la imagen cubra todo el fondo */
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
     margin: 0; /* Elimina márgenes por defecto */
 }
+body > div.c{
+    display: flex;
+    flex-direction: column; /* Alinea los elementos en una columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: center; /* Centra los elementos verticalmente */
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    text-shadow: 0px 0px 0px rgba(20, 20, 20, 100);
+}
+/* Para los textos h2 */
+body > div.c > h2 {
+    color: #ffffff;
+    font-size: 70px;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 1); /* Sombra negra notoria */
+}
+
+/* Para los párrafos p */
+body > div.c > p {
+    color: #ffffff;
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.5; /* Espacio entre las líneas */
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 1); /* Sombra negra notoria */
+}
+
+/* Para la imagen img */
+body > div.c > img {
+    width: 200px; /* Ajusta la anchura a 150px */
+    height: auto;
+}
+body > div.hbox{
+    display: flex; /* Activa el modelo flexbox */
+    justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
+    align-items: center; /* Alinea los elementos verticalmente en el centro */
+    gap: 20px; /* Espacio entre los elementos (opcional) */
+}
+body > div.hbox>div.elemento{
+    
+}
 header{
     width: 100%;
     height: 70px;
-    background-color: black;
-    display: flex;/*Activa el modelo de diseño flexible*/
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex; /* Activa el modelo de diseño flexible */
     justify-content: center;
-    background-color: rgba(0, 0, 0,.8);
+    align-items: center; /* Alinea verticalmente los hijos */
+    position: fixed; /* Hace que el header sea fijo */
+    top: 0; /* Lo coloca en la parte superior de la pantalla */
+    left: 0; /* Lo alinea al lado izquierdo */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
 }
 header>div#divpapa{
     width: calc(100% - 100px);
@@ -37,10 +79,13 @@ header>div#divpapa>div.hijo1{/*Para mandar llamar la clase se pone un punto y lu
     justify-content: center;
     flex-shrink: 0; /* Evita que se encoja */
     width: 150px; /* Ajusta el ancho del contenedor del logo */
+    display: flex;
+    justify-content: space-between;
 }
 :root{
    --color: #ffffff
 }
+
 header>div#divpapa>div.hijo1>img{
     max-width: 100px; /* Ajusta el tamaño máximo del logotipo */
     height: auto; /* Mantén las proporciones del logotipo */
@@ -77,6 +122,11 @@ header>div#divpapa>div#hijo2>ul>li{
     list-style: none;/*Quita los puntos que aparecen alado del texto*/
 
 }
+header>div#divpapa>div#hijo2>ul>li:hover {
+    text-shadow: 0 0 15px var(--color) !important;  /* Aplica una sombra */
+    transition: all 0.3s ease !important; /* Hace una transición */
+}
+
 header>div#divpapa>div#hijo2>ul>li>a{
     text-decoration: none;
     color: #ffffff;
