@@ -81,8 +81,10 @@ body > div.hbox> div{
     padding-left: 10px;
     padding-right: 10px;
 }
-body > div.hbox> div> iframe{
-    margin: 2.5%
+body > div.hbox> div> img{
+    height: 200px;
+    width: 300px;
+    
 }
 body>div.hbox>div>h2{
     color: #ffffff;
