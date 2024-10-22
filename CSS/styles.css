@@ -44,7 +44,7 @@ body > div.c > p{
 /* Para la imagen img */
 body > div.c > img{
     width: 200px; /* Ajusta la anchura a 150px */
-    height: auto;
+    height: 35%;
 }
 body > div.hbox{
     display: flex; /* Activa el modelo flexbox para que los elementos queden uno enseguida del otro */
@@ -107,7 +107,7 @@ header>div#divpapa>div.hijo1{/*Para mandar llamar la clase se pone un punto y lu
 
 header>div#divpapa>div.hijo1>img{
     max-width: 100px; /* Ajusta el tamaño máximo del logotipo */
-    height: auto; /* Mantén las proporciones del logotipo */
+    height: 100%; /* Mantén las proporciones del logotipo */
 }
 header>div#divpapa>div.hijo1>a{
     width: 75%;/*Agarra el 75% del dv.hijo1*/
