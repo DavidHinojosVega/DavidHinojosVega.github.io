@@ -7,13 +7,7 @@
     /*Para poner la imagen de fondo*/
 }
 body{
-    background-image: url('../img/neo1.jpg');
-    background-color: rgba(0, 0, 0, 0.75);
-    background-blend-mode: multiply;
-    background-size: cover; /* Para que la imagen cubra todo el fondo */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
-    height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
+    background-color: #000000;
     margin: 0; /* Elimina márgenes por defecto */
 }
 body > div.c{
@@ -23,6 +17,13 @@ body > div.c{
     justify-content: center; /* Centra los elementos verticalmente */
     height: 100vh; /* Ocupa toda la altura de la ventana */
     text-shadow: 0px 0px 0px rgba(20, 20, 20, 100);
+    background-image: url('../img/neo1.webp');
+    background-color: rgba(0, 0, 0, 0.75);
+    background-blend-mode: multiply;
+    background-size: cover; /* Para que la imagen cubra todo el fondo */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
 }
 /* Para los textos h2 */
 body > div.c > h2 {
@@ -32,7 +33,7 @@ body > div.c > h2 {
 }
 
 /* Para los párrafos p */
-body > div.c > p {
+body > div.c > p{
     color: #ffffff;
     font-size: 18px;
     text-align: center;
@@ -41,18 +42,36 @@ body > div.c > p {
 }
 
 /* Para la imagen img */
-body > div.c > img {
+body > div.c > img{
     width: 200px; /* Ajusta la anchura a 150px */
     height: auto;
 }
 body > div.hbox{
-    display: flex; /* Activa el modelo flexbox */
+    display: flex; /* Activa el modelo flexbox para que los elementos queden uno enseguida del otro */
     justify-content: space-between; /* Distribuye los elementos con espacio entre ellos */
     align-items: center; /* Alinea los elementos verticalmente en el centro */
     gap: 20px; /* Espacio entre los elementos (opcional) */
+    background-image: radial-gradient(circle, #4d4d4d 1px, transparent 1px);
+    background-size: 5px 5px;
+    background-position: 2.5px 2.5px;
+    margin-top: 1px;
 }
-body > div.hbox>div.elemento{
-    
+body > div.hbox> div{
+    width: 50%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+body > div.hbox> div> iframe{
+    margin: 2.5%
+}
+body>div.hbox>div>h2{
+    color: #ffffff;
+    font-size: 50px;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
+}
+body>div.hbox>div>p{
+    color: #ffffff;
+
 }
 header{
     width: 100%;
@@ -90,16 +109,20 @@ header>div#divpapa>div.hijo1>img{
     max-width: 100px; /* Ajusta el tamaño máximo del logotipo */
     height: auto; /* Mantén las proporciones del logotipo */
 }
-header>div#divpapa>div.hijo1>button{
+header>div#divpapa>div.hijo1>a{
     width: 75%;/*Agarra el 75% del dv.hijo1*/
-    height: 40px;/*Altura del boton*/
+    height: 23px;/*Altura del boton*/
     font-size: .8rem;
     background: none;
     border: 3px solid;
     color: #ffffff;
     transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    padding-top: 8px;
 }
-header>div#divpapa>div.hijo1>button:hover{
+header>div#divpapa>div.hijo1>a:hover{
     background-color: #ffffff;  /* Cambia el color de fondo del botón a un tono oscuro (#001a2b) cuando se pasa el mouse por encima */
     box-shadow: 0 0 10px var(--color);  /* Aplica una sombra al botón. La sombra es difusa (0px en desplazamiento horizontal y vertical) con un desenfoque de 20px y el color se toma de una variable CSS personalizada (--color) */
     transition: all 1 ease;/*Hace una transicion generando una animación*/
