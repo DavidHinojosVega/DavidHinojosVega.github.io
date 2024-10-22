@@ -82,23 +82,27 @@ body > div.hbox> div{
     padding-right: 10px;
 }
 body > div.hbox> div> img{
-   width: 600px;
+   width: 100%;
    height: 400px;
    margin: 10px;
 }
 body>div.hbox>div>h2{
     color: #ffffff;
-    font-size: 50px;
+    font-size: 53px;
+    text-align: justify;
     text-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
 }
-body>div#separador{
-    background-color: #ffffff;
+body>div.separador{
+    background-color: #d1d1d1;
     width: 100%;
-    height: 10px;
+    height: 5px;
 }
 body>div.hbox>div>p{
-    color: #d2d2d2;
-
+    font-size: 150%;
+    color: #8e8e8e;
+    text-align: justify;
+    margin: 10px;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 1);
 }
 header{
     width: 100%;
