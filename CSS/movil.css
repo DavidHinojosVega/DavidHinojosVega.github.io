@@ -15,13 +15,21 @@
     }
     body>div.c{
         width: 100%;
-
+    }
+    body>div.c>img{
+        width: 30%;
+        height: 35%;
+    }
+    body>div.c>p{
+        font-size: 15px;
     }
     body > div.hbox> div {
         width: 100%;
     }
     body > div.c > h2 {
         text-align: center;
+        font-size: 40px;
+        margin: 10px;
     }
     body > div.hbox {
         display: block;

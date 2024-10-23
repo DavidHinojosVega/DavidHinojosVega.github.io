@@ -1,0 +1,10 @@
+@media (max-width: 500px) {
+
+}
+body>header>#divpapa>div.hijo>img{
+    height: 20px;
+    width: 10px;
+}
+
+/*.clases
+  #id*/
