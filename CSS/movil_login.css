@@ -11,6 +11,9 @@
 body>header>#divpapa>div.hijo>a>img{
   height: 70px;
   width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 header>div#divpapa>div.oculto{
 display: none;
