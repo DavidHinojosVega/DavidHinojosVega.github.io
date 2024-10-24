@@ -48,7 +48,7 @@ body{
     text-decoration: none;
     margin: 15px 0 10px;
 }
-.container button{
+.container button{/*boton negro*/
     background-color: #000000;
     color: #ffffff;
     font-size: 12px;

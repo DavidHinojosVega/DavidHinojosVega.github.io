@@ -131,6 +131,7 @@ header>div#divpapa>div.hijo1{/*Para mandar llamar la clase se pone un punto y lu
     width: 150px; /* Ajusta el ancho del contenedor del logo */
     display: flex;
     justify-content: space-between;
+    
 }
 :root{
    --color: #ffffff
@@ -140,7 +141,7 @@ header>div#divpapa>div.hijo1>img{
     max-width: 100px; /* Ajusta el tamaño máximo del logotipo */
     height: 100%; /* Mantén las proporciones del logotipo */
 }
-header>div#divpapa>div.hijo1>a{
+header>div#divpapa>div.hijo1>div#btningresarheader>a{
     background-color: #000000;
     color: #ffffff;
     font-size: 12px;
@@ -154,7 +155,7 @@ header>div#divpapa>div.hijo1>a{
     text-decoration: none;
     border-color: #ffffff;
 }
-header>div#divpapa>div.hijo1>a:hover{
+header>div#divpapa>div.hijo1>div#btningresarheader>a:hover{
     background-color: #ffffff;  /* Cambia el color de fondo del botón a un tono oscuro (#001a2b) cuando se pasa el mouse por encima */
     box-shadow: 0 0 10px var(--color);  /* Aplica una sombra al botón. La sombra es difusa (0px en desplazamiento horizontal y vertical) con un desenfoque de 20px y el color se toma de una variable CSS personalizada (--color) */
     transition: all .3s ease;/*Hace una transicion generando una animación*/

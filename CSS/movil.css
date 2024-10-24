@@ -13,6 +13,18 @@
         padding: 0;
         width: 100%;
     }
+    header>div#divpapa>div.hijo1>div#btningresarheader{
+        display: none;
+    }
+    header>div#divpapa>div.hijo1>div#btnlupa{
+        display: none;
+    }
+    header>div#divpapa{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 35%;
+    }
     body>div.c{
         width: 100%;
     }
@@ -48,7 +60,7 @@
     body > div.hbox> div> h2 {
         text-align: center;
     }
-    body > div.hbox> div> p {
+    body > div.hbox> div> p{
         text-align: center;
         font-size: 20px;
     }
