@@ -1,4 +1,10 @@
 @media (max-width: 500px) {
+  body>header>#divpapa{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 15%;
+  }
   body>header>#divpapa>div.hijo>img{
     height: 20px;
     width: 10px;
