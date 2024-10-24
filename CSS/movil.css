@@ -23,7 +23,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-left: 43%;
+    }
+    header>div#divpapa>div.hijo1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     body>div.c{
         width: 100%;
@@ -71,6 +75,9 @@
         height: 50px;
         width: 20px;
     }
+    header>div#divpapa>div.oculto{
+        display: none;
+        }
     /*.clase*/
     /*#id*/
 }

@@ -215,7 +215,6 @@ header>div#divpapa>div.hijo1{/*Para mandar llamar la clase se pone un punto y lu
     flex-shrink: 0; /* Evita que se encoja */
     width: 150px; /* Ajusta el ancho del contenedor del logo */
     display: flex;
-    justify-content: space-between;
 }
 :root{
    --color: #ffffff
