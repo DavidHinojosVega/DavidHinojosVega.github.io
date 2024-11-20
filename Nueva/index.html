@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página con Bootstrap</title>
+
+    <!-- Enlace a la hoja de estilos de Bootstrap desde el CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Si quieres usar íconos, puedes agregar este enlace también -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/styles.css">
+    
+</head>
+<!--BODY-->
+<body>
+    <header class="px-3" style="background-color: black;">
+        <nav class="navbar navbar-expand-lg fixed-top" style="background-color: black;">
+            <div class="container-fluid">
+                <a class="navbar-brand text-white" href="#"><img src="./img/bracketmaster.webp" alt="" style="height: 50px;"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 px-3">
+                        <li class="nav-item">
+                            <a class="nav-link active text-white" aria-current="page" href="#" style="padding-left: 20px; padding-right: 20px;">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#" style="padding-left: 20px; padding-right: 20px;">Crew Battles</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#" style="padding-left: 20px; padding-right: 20px;">Mini Bracket</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="./baneo.html" style="padding-left: 20px; padding-right: 20px;">Baneos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="./top8.html" style="padding-left: 20px; padding-right: 20px;">Generador top 8</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#" style="padding-left: 20px; padding-right: 20px;">Historia</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#" style="padding-left: 20px; padding-right: 20px;">Sorteos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="./dinero.html" style="padding-left: 20px; padding-right: 20px;">Dinero</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#" style="padding-left: 20px; padding-right: 20px;">Manual de torneos</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <button class="btn btn-outline-light" type="submit">Search</button>
+                        <a href="#"><i class="bi bi-joystick text-white"></i></a>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--HEADER-->
+
+
+
+
+
+    <!--CARRUSEL DE IMAGENES-->
+    <div style="width: 100%; height: 85px; background-color: black;"></div>
+    <div id="carouselExampleCaptions" class="carousel slide" style="font-family: 'Chakra Petch', sans-serif;">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./img/CrewSMASH.webp" class="d-block wx-100" alt="..." style="height: 50%; width: 100%; filter: brightness(0.5)">
+            <div class="carousel-caption d-none top-0 mt-4 align-items-center d-md-block">
+                <img class="w-25 mt-4" src="./img/hand.webp" alt="">
+              <h5 class="mt-5 text-shadow"  style="font-size: 80px" id="nombrelogo">Bracket Master</h5>
+              <p>La solución sencilla a tus problemas, años de experiencia a tu disposición.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./img/neo1.webp" class="d-block wx-100" alt="..." style="height: 50%; width: 100%; filter: brightness(0.5)">
+            <div class="carousel-caption d-none top-0 mt-4 align-items-center d-md-block">
+                <img class="w-25 mt-4" src="./img/hand.webp" alt="">
+              <h5 class="mt-5"  style="font-size: 80px">Bracket Master</h5>
+              <p>Some representative placeholder content for the first slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./img/neo2.jpg" class="d-block w-25" alt="...">
+            <div class="carousel-caption d-none top-0 mt-4 align-items-center d-md-block">
+                <img class="w-25 mt-4" src="./img/hand.webp" alt="">
+              <h5 class="mt-5"  style="font-size: 80px">Bracket Master</h5>
+              <p>Some representative placeholder content for the first slide.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    <!--CARRUSEL DE IMAGENES-->
+
+
+
+
+
+
+
+    <!---------DATOS ANIMADOS------------>
+    <!-- ESTADÍSTICAS ANIMADAS -->
+    <div id="stats" class="my-2" style="position: relative; font-family: 'Chakra Petch', sans-serif; color: rgb(255, 255, 255);">
+        <!-- Imagen de fondo -->
+        <div>
+            <img src="./img/samus.jpg" style="width: 100%; height: 600px;">
+        </div>
+        <!-- Contenido superpuesto -->
+        <div class="row text-center" style="position: absolute; top: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; background-color: rgba(0, 0, 0, 0.5);">
+            <div class="col-md-3" style="margin-bottom: 20px;">
+                <div class="number" data-target="50" style="font-size: 100px; text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);">0</div>
+                <div class="label" style="font-size: 30px; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);">Torneos realizados</div>
+            </div>
+            <div class="col-md-3" style="margin-bottom: 20px;">
+                <div class="number" data-target="500" style="font-size: 100px; text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);">0</div>
+                <div class="label" style="font-size: 30px; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);">Participantes únicos</div>
+            </div>
+            <div class="col-md-3" style="margin-bottom: 20px;">
+                <div class="number" data-target="2000" style="font-size: 100px; text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);">0</div>
+                <div class="label" style="font-size: 30px; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);">Batallas jugadas</div>
+            </div>
+            <div class="col-md-3" style="margin-bottom: 20px;">
+                <div class="number" data-target="100" style="font-size: 100px; text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);">0</div>
+                <div class="label" style="font-size: 30px; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);">Premios entregados</div>
+            </div>
+        </div>
+    </div>    
+    <!-- ESTADÍSTICAS ANIMADAS -->
+
+    <script>
+        // Función para reiniciar y activar la animación de conteo
+        const handleVisibility = (entries) => {
+            entries.forEach(entry => {
+                const counters = document.querySelectorAll('.number');
+
+                if (entry.isIntersecting) {
+                    // Comienza la animación cuando es visible
+                    counters.forEach(counter => {
+                        const target = +counter.getAttribute('data-target');
+                        counter.innerText = '0'; // Reiniciar a cero antes de animar
+                        const speed = 50;
+                        const updateCount = () => {
+                            const count = +counter.innerText;
+                            const increment = target / speed;
+
+                            if (count < target) {
+                                counter.innerText = Math.ceil(count + increment);
+                                setTimeout(updateCount, 30);
+                            } else {
+                                counter.innerText = target;
+                            }
+                        };
+                        updateCount();
+                    });
+                } else {
+                    // Reinicia los números a cero cuando deja de ser visible
+                    counters.forEach(counter => {
+                        counter.innerText = '0';
+                    });
+                }
+            });
+        };
+
+        // Crear el observador
+        const observer = new IntersectionObserver(handleVisibility, {
+            threshold: 0.5, // Detectar cuando al menos el 50% es visible
+        });
+
+        // Observa la sección de estadísticas
+        observer.observe(document.querySelector('#stats'));
+    </script>
+
+    <!--DIVISION-->
+    <div class="" style="background: linear-gradient(to right, rgb(76, 76, 76), rgb(255, 255, 255)); height: 20px; width: 100%; margin-top: 50px;"></div>
+    <!--DIVISION-->
+    <!--DATOS ANIMADOS-->
+
+
+
+
+
+
+
+<!--CONTENERDOR IMAGEN - TEXTO-->
+<div class="container my-5" style="background-color: black;">
+    <div class="row align-items-center">
+      <!-- Columna de la imagen -->
+      <div class="col-md-6">
+        <img src="./img/doubles.webp" class="img-fluid" alt="Imagen de ejemplo">
+      </div>
+      <!-- Columna del texto -->
+      <div class="col-md-6">
+        <h2 style="color: aliceblue; font-size: 59px;">Tenemos lo que buscas
+        </h2>
+        <p       style="color: aliceblue;">La comunidad de los E-sports ha crecido de manera impresionante, conectando a millones de apasionados por los videojuegos y las competencias digitales. Nuestro objetivo es ser un aliado clave en tu desarrollo, ya sea como comunidad, organizador de eventos o jugador amateur, ofreciéndote herramientas prácticas y un espacio donde puedas destacar. Creemos que el éxito en los E-sports se basa en la colaboración, la dedicación y el apoyo mutuo. Juntos, construimos el futuro de los E-sports, un paso a la vez.</p>
+      </div>
+    </div>
+  </div>
+<!--CONTENERDOR IMAGEN - TEXTO-->
+
+<!--CARTAS EXPLICANDO HERRAMIENTAS-->
+<div class="container my-5">
+    <div class="row g-4">
+        <!-- Tarjeta 1 -->
+        <div class="col-md-4">
+            <div class="card text-white  h-100" style="background-color: #191919;">
+                <div class="card-body text-center">
+                    <img src="https://via.placeholder.com/100" alt="Single Elimination" class="mb-3">
+                    <h5 class="card-title">Crew Battles</h5>
+                    <p class="card-text">Immediate elimination after losing a match.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Tarjeta 2 -->
+        <div class="col-md-4">
+            <div class="card text-white bg-dark h-100">
+                <div class="card-body text-center">
+                    <img src="https://via.placeholder.com/100" alt="Double Elimination" class="mb-3">
+                    <h5 class="card-title">Bracket</h5>
+                    <p class="card-text">Elimination after losing two matches.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Tarjeta 3 -->
+        <div class="col-md-4">
+            <div class="card text-white bg-dark h-100">
+                <div class="card-body text-center">
+                    <img src="https://via.placeholder.com/100" alt="Free For All" class="mb-3">
+                    <h5 class="card-title">Baneos</h5>
+                    <p class="card-text">Compete against several participants at once in each match.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Tarjeta 4 -->
+        <div class="col-md-4">
+            <div class="card text-white bg-dark h-100">
+                <div class="card-body text-center">
+                    <img src="https://via.placeholder.com/100" alt="Round Robin" class="mb-3">
+                    <h5 class="card-title">Generador top 8</h5>
+                    <p class="card-text">Face off against all participants, one at a time.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Tarjeta 5 -->
+        <div class="col-md-4">
+            <div class="card text-white bg-dark h-100">
+                <div class="card-body text-center">
+                    <img src="https://via.placeholder.com/100" alt="Swiss" class="mb-3">
+                    <h5 class="card-title">División de dinero</h5>
+                    <p class="card-text">Get paired against similar strength opponents each round based on cumulative scoring.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Tarjeta 6 -->
+        <div class="col-md-4">
+            <div class="card text-white bg-dark h-100">
+                <div class="card-body text-center">
+                    <img src="https://via.placeholder.com/100" alt="Leaderboard" class="mb-3">
+                    <h5 class="card-title">Manual de torneos </h5>
+                    <p class="card-text">Compete for top rank, scored by whatever means you see fit.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--CARTAS EXPLICANDO HERRAMIENTAS-->
+
+
+     
+
+    <!--TARJETAS-->
+    <div class="container pt-4">
+        <div class="row">
+
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card" style="border-color: black;">
+                    <img src="./img/neov2.webp" class="card-img-top" alt="Neo Smash V2">
+                    <div class="card-body">
+                        <h5 class="card-title">Neo Smash V2</h5>
+                        <p class="card-text">Tuvimos la oportunidad de presenciar el primer torneo de Neo Smash</p>
+                        <a href="#" class="btn btn-primary btn-sm">Más información</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card" style="border-color: black;">
+                    <img src="./img/neov3.webp" class="card-img-top" alt="Neo Smash V3">
+                    <div class="card-body">
+                        <h5 class="card-title">Neo Smash V3</h5>
+                        <p class="card-text">Tuvimos la oportunidad de presenciar el primer torneo de Neo Smash</p>
+                        <a href="#" class="btn btn-primary btn-sm">Más información</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card" style="border-color: black;">
+                    <img src="./img/neoxami.webp" class="card-img-top" alt="Neo Smash Amigurumi">
+                    <div class="card-body">
+                        <h5 class="card-title">Neo Smash x Ami Smash
+                            (Comunidad en lebaron)</h5>
+                        <p class="card-text">Sorteo especial con un amigurumi tejido para los participantes con</p>
+                        <a href="#" class="btn btn-primary btn-sm">Más información</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card" style="border-color: black;">
+                    <img src="./img/neoxami.webp" class="card-img-top" alt="Neo Smash Amigurumi">
+                    <div class="card-body">
+                        <h5 class="card-title">Neo Smash x Ami Smash
+                            (Comunidad en lebaron)</h5>
+                        <p class="card-text">Sorteo especial con un amigurumi tejido para los participantes con</p>
+                        <a href="#" class="btn btn-primary btn-sm">Más información</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="card" style="border-color: black;">
+                    <img src="./img/neoxami.webp" class="card-img-top" alt="Neo Smash Amigurumi">
+                    <div class="card-body">
+                        <h5 class="card-title">Neo Smash x Ami Smash
+                            (Comunidad en lebaron)</h5>
+                        <p class="card-text">Sorteo especial con un amigurumi tejido para los participantes con</p>
+                        <a href="#" class="btn btn-primary btn-sm">Más información</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+        </div>
+      </div>
+    <!--TARJETAS-->
+
+
+    
+    
+
+    <!-- Scripts de Bootstrap (opcional, pero necesario para algunas funcionalidades) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
