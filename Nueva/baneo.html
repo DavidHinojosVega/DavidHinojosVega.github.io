@@ -7,6 +7,7 @@
     <title>Super Smash Bros. Ultimate Ruleset</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./CSS/estilosbaneos.css">
     <style>
         .stage-button {
             border: none;
@@ -16,7 +17,7 @@
         }
 
         .stage-button:hover {
-            transform: scale(1);
+            transform: scale(1.05);
         }
 
         .stage-image {
@@ -24,17 +25,25 @@
             border-radius: 8px;
         }
 
-        .stage-name {
-            margin-top: 5px;
+        .baneado {
+            opacity: 0.5;
+            cursor: not-allowed;
+            filter: grayscale(100%);
+        }
+
+        .seleccionado {
+            border: 3px solid green;
+            box-shadow: 0px 0px 10px green;
+        }
+
+        .status-message {
             font-weight: bold;
-            text-align: center;
+            margin-top: 20px;
         }
     </style>
 </head>
 
 <body>
-
-
     <!--HEADER-->
     <header class="px-3" style="background-color: black;">
         <nav class="navbar navbar-expand-lg" style="background-color: black;">
@@ -48,107 +57,86 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto mb-2 mb-lg-0 px-3">
-                        <li class="nav-item">
-                            <a class="nav-link active text-white" aria-current="page" href="./index.html"
-                                style="padding-left: 20px; padding-right: 20px;">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#"
-                                style="padding-left: 20px; padding-right: 20px;">Crew Battles</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#"
-                                style="padding-left: 20px; padding-right: 20px;">Mini Bracket</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#"
-                                style="padding-left: 20px; padding-right: 20px;">Baneos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="./top8.html"
-                                style="padding-left: 20px; padding-right: 20px;">Generador top 8</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#"
-                                style="padding-left: 20px; padding-right: 20px;">Historia</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#"
-                                style="padding-left: 20px; padding-right: 20px;">Sorteos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="./dinero.html"
-                                style="padding-left: 20px; padding-right: 20px;">Dinero</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#"
-                                style="padding-left: 20px; padding-right: 20px;">Manual de torneos</a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link active text-white" href="./index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Crew Battles</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Mini Bracket</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Baneos</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Generador Top 8</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Historia</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Sorteos</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="#">Manual de torneos</a></li>
                     </ul>
-                    <form class="d-flex" role="search">
-                        <button class="btn btn-outline-light" type="submit">Search</button>
-                        <a href="#"><i class="bi bi-joystick text-white"></i></a>
-                    </form>
                 </div>
             </div>
         </nav>
     </header>
     <!--HEADER-->
 
-
-
+    <!-- Contenedor de escenarios -->
     <div class="container my-5">
+        <h1 class="text-center mb-4">Selecciona un escenario</h1>
+        <div id="status-message" class="text-center status-message"></div>
         <div class="row">
+            <!-- Escenarios -->
             <div class="col-md-4 col-sm-6 mb-4">
-                <button class="stage-button" onclick="selectStage('Campo de batalla')">
-                    <img src="imgEscenarios/battlefield.webp" alt="Campo de batalla" class="stage-image">
+                <button class="stage-button" onclick="handleStage('Battlefield')" id="Battlefield">
+                    <img src="imgEscenarios/battlefield.webp" alt="Battlefield" class="stage-image">
                 </button>
             </div>
             <div class="col-md-4 col-sm-6 mb-4">
-                <button class="stage-button" onclick="selectStage('Pequeño campo de batalla')">
-                    <img src="imgEscenarios/small.webp" alt="Pequeño campo de batalla" class="stage-image">
+                <button class="stage-button" onclick="handleStage('Small Battlefield')" id="Small Battlefield">
+                    <img src="imgEscenarios/small.webp" alt="Small Battlefield" class="stage-image">
                 </button>
             </div>
             <div class="col-md-4 col-sm-6 mb-4">
-                <button class="stage-button" onclick="selectStage('Destino final')">
-                    <img src="imgEscenarios/final.webp" alt="Destino final" class="stage-image">
+                <button class="stage-button" onclick="handleStage('Final Destination')" id="Final Destination">
+                    <img src="imgEscenarios/final.webp" alt="Final Destination" class="stage-image">
                 </button>
             </div>
             <div class="col-md-4 col-sm-6 mb-4">
-                <button class="stage-button" onclick="selectStage('Pueblo Smash')">
-                    <img src="imgEscenarios/town.webp" alt="Pueblo Smash" class="stage-image">
-                </button>
-            </div>
-            <div class="col-md-4 col-sm-6 mb-4">
-                <button class="stage-button" onclick="selectStage('Estadio Pokémon 2')">
-                    <img src="imgEscenarios/ps2.webp" alt="Estadio Pokémon 2" class="stage-image">
-                </button>
-            </div>
-            <div class="col-md-4 col-sm-6 mb-4">
-                <button class="stage-button" onclick="selectStage('Sobrevolando el pueblo')">
-                    <img src="imgEscenarios/smashville.webp" alt="Sobrevolando el pueblo" class="stage-image">
-                </button>
-            </div>
-            <div class="col-md-4 col-sm-6 mb-4">
-                <button class="stage-button" onclick="selectStage('Yoshi\'s Story')">
+                <button class="stage-button" onclick="handleStage('Yoshi\'s Story')" id="Yoshi's Story">
                     <img src="imgEscenarios/yoshi.webp" alt="Yoshi's Story" class="stage-image">
                 </button>
             </div>
             <div class="col-md-4 col-sm-6 mb-4">
-                <button class="stage-button" onclick="selectStage('Bastión Hueco')">
-                    <img src="imgEscenarios/Hollow.webp" alt="Bastión Hueco" class="stage-image">
+                <button class="stage-button" onclick="handleStage('Pokémon Stadium 2')" id="Pokémon Stadium 2">
+                    <img src="imgEscenarios/ps2.webp" alt="Pokémon Stadium 2" class="stage-image">
                 </button>
             </div>
             <div class="col-md-4 col-sm-6 mb-4">
-                <button class="stage-button" onclick="selectStage('Liga Pokémon de Kalos')">
-                    <img src="imgEscenarios/kalos.webp" alt="Liga Pokémon de Kalos" class="stage-image">
+                <button class="stage-button" onclick="handleStage('Smashville')" id="Smashville">
+                    <img src="imgEscenarios/smashville.webp" alt="Smashville" class="stage-image">
+                </button>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <button class="stage-button" onclick="handleStage('Town and City')" id="Town and City">
+                    <img src="imgEscenarios/town.webp" alt="Town and City" class="stage-image">
+                </button>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <button class="stage-button" onclick="handleStage('Kalos Pokémon League')" id="Kalos Pokémon League">
+                    <img src="imgEscenarios/kalos.webp" alt="Kalos Pokémon League" class="stage-image">
+                </button>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <button class="stage-button" onclick="handleStage('Hollow Bastion')" id="Hollow Bastion">
+                    <img src="imgEscenarios/Hollow.webp" alt="Hollow Bastion" class="stage-image">
                 </button>
             </div>
         </div>
     </div>
 
+    <div class="text-center mt-4">
+        <button id="next-phase-btn" class="btn btn-primary" onclick="nextPhase()">Pasar a la siguiente fase</button>
+    </div>
+    
+
     <!-- Bootstrap JS -->
+    <script src="./js/baneos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script para manejar lógica -->
+    
 </body>
 
 </html>
