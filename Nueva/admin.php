@@ -1,3 +1,13 @@
+<?php
+
+session_start();
+if(isset($_SESSION['userdata'])){
+    $user = $_SESSION['userdata'];
+}else{
+    header("Location: ./login2.php");
+}
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -52,7 +62,8 @@
                     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">99+</span>
                 </button>
                 <img src="./img/jojo.jpeg" alt="" style="width: 30px; height: 30px; border-radius: 50%;" class="me-2">
-                <span>Benito Juarez</span>
+                
+                <span> <?php echo $user['nombre'];?> </span>
             </div>
         </div>
     </header>

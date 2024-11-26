@@ -5,7 +5,7 @@ h5#nombrelogo{
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 body{
-    background-color: rgb(0, 0, 0);
+    background: #121212; 
     /*background-image: radial-gradient(circle, #2d2d2d 1px, transparent 1px);
     background-size: 25px 25px;
     background-position: 1px 1px;*/

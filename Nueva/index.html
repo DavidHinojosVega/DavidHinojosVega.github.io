@@ -16,6 +16,9 @@
 </head>
 <!--BODY-->
 <body>
+
+    <div class="container">
+        <!--HEADER-->
     <header class="px-3" style="background-color: black;">
         <nav class="navbar navbar-expand-lg fixed-top" style="background-color: black;">
             <div class="container-fluid">
@@ -55,14 +58,14 @@
                     </ul>
                     <form class="d-flex" role="search">
                         <button class="btn btn-outline-light" type="submit">Search</button>
-                        <a href="#"><i class="bi bi-joystick text-white"></i></a>
                     </form>
                 </div>
             </div>
         </nav>
     </header>
     <!--HEADER-->
-
+    </div>
+   
 
 
 
@@ -112,132 +115,70 @@
       </div>
     <!--CARRUSEL DE IMAGENES-->
 
+    
 
 
-
-
-
-
-    <!---------DATOS ANIMADOS------------>
-    <!-- ESTADÍSTICAS ANIMADAS -->
-    <div id="stats" class="my-2" style="position: relative; font-family: 'Chakra Petch', sans-serif; color: rgb(255, 255, 255);">
-        <!-- Imagen de fondo -->
-        <div>
-            <img src="./img/samus.jpg" style="width: 100%; height: 600px;">
-        </div>
-        <!-- Contenido superpuesto -->
-        <div class="row text-center" style="position: absolute; top: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; background-color: rgba(0, 0, 0, 0.5);">
-            <div class="col-md-3" style="margin-bottom: 20px;">
-                <div class="number" data-target="50" style="font-size: 100px; text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);">0</div>
-                <div class="label" style="font-size: 30px; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);">Torneos realizados</div>
-            </div>
-            <div class="col-md-3" style="margin-bottom: 20px;">
-                <div class="number" data-target="500" style="font-size: 100px; text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);">0</div>
-                <div class="label" style="font-size: 30px; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);">Participantes únicos</div>
-            </div>
-            <div class="col-md-3" style="margin-bottom: 20px;">
-                <div class="number" data-target="2000" style="font-size: 100px; text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);">0</div>
-                <div class="label" style="font-size: 30px; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);">Batallas jugadas</div>
-            </div>
-            <div class="col-md-3" style="margin-bottom: 20px;">
-                <div class="number" data-target="100" style="font-size: 100px; text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);">0</div>
-                <div class="label" style="font-size: 30px; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);">Premios entregados</div>
-            </div>
-        </div>
-    </div>    
-    <!-- ESTADÍSTICAS ANIMADAS -->
-
-    <script>
-        // Función para reiniciar y activar la animación de conteo
-        const handleVisibility = (entries) => {
-            entries.forEach(entry => {
-                const counters = document.querySelectorAll('.number');
-
-                if (entry.isIntersecting) {
-                    // Comienza la animación cuando es visible
-                    counters.forEach(counter => {
-                        const target = +counter.getAttribute('data-target');
-                        counter.innerText = '0'; // Reiniciar a cero antes de animar
-                        const speed = 50;
-                        const updateCount = () => {
-                            const count = +counter.innerText;
-                            const increment = target / speed;
-
-                            if (count < target) {
-                                counter.innerText = Math.ceil(count + increment);
-                                setTimeout(updateCount, 30);
-                            } else {
-                                counter.innerText = target;
-                            }
-                        };
-                        updateCount();
-                    });
-                } else {
-                    // Reinicia los números a cero cuando deja de ser visible
-                    counters.forEach(counter => {
-                        counter.innerText = '0';
-                    });
-                }
-            });
-        };
-
-        // Crear el observador
-        const observer = new IntersectionObserver(handleVisibility, {
-            threshold: 0.5, // Detectar cuando al menos el 50% es visible
-        });
-
-        // Observa la sección de estadísticas
-        observer.observe(document.querySelector('#stats'));
-    </script>
 
     <!--DIVISION-->
-    <div class="" style="background: linear-gradient(to right, rgb(76, 76, 76), rgb(255, 255, 255)); height: 20px; width: 100%; margin-top: 50px;"></div>
+    <div class="" style="background: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255)); height: 1px; width: 100%;"></div>
     <!--DIVISION-->
     <!--DATOS ANIMADOS-->
+    <section class="py-5 position-relative" style="background: #121212; color: white;">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Sección de los personajes -->
+                <div class="col-md-6 position-relative" style="height: 450px;">
+                    <!-- Imagen del primer personaje -->
+                    <img src="./img/main.png" alt="Personaje 1" class="img-fluid position-absolute" style="z-index: 2; height: 100%; bottom: 0; left: 0;">
+                    <!-- Imagen del segundo personaje -->
+                    <img src="./img/main2.png" alt="Personaje 2" class="img-fluid position-absolute" style="z-index: 1; height: 100%; bottom: 0; right: 10%;">
+                </div>
+
+                <!-- Sección de texto -->
+                <div class="col-md-6">
+                    <h1 class="fw-bold text-uppercase">El destino llama</h1>
+                    <p>
+                        Tras su último enfrentamiento, los héroes están listos para un nuevo torneo.
+                        La batalla definitiva decidirá quién será el verdadero campeón.
+                    </p>
+                    <p>
+                        ¡Únete a este evento épico y demuestra tus habilidades en Neo Smash!
+                    </p>
+                    <a href="#" class="btn btn-danger fw-bold px-4 py-2">Más Información →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+     <!--DIVISION-->
+     <div class="" style="background: linear-gradient(to right, rgb(255, 255, 255), rgb(255, 255, 255)); height: 1px; width: 100%;"></div>
+     <!--DIVISION-->
 
 
 
 
 
-
-
-<!--CONTENERDOR IMAGEN - TEXTO-->
-<div class="container my-5" style="background-color: black;">
-    <div class="row align-items-center">
-      <!-- Columna de la imagen -->
-      <div class="col-md-6">
-        <img src="./img/doubles.webp" class="img-fluid" alt="Imagen de ejemplo">
-      </div>
-      <!-- Columna del texto -->
-      <div class="col-md-6">
-        <h2 style="color: aliceblue; font-size: 59px;">Tenemos lo que buscas
-        </h2>
-        <p       style="color: aliceblue;">La comunidad de los E-sports ha crecido de manera impresionante, conectando a millones de apasionados por los videojuegos y las competencias digitales. Nuestro objetivo es ser un aliado clave en tu desarrollo, ya sea como comunidad, organizador de eventos o jugador amateur, ofreciéndote herramientas prácticas y un espacio donde puedas destacar. Creemos que el éxito en los E-sports se basa en la colaboración, la dedicación y el apoyo mutuo. Juntos, construimos el futuro de los E-sports, un paso a la vez.</p>
-      </div>
-    </div>
-  </div>
-<!--CONTENERDOR IMAGEN - TEXTO-->
 
 <!--CARTAS EXPLICANDO HERRAMIENTAS-->
 <div class="container my-5">
     <div class="row g-4">
+        <h1 class="fw-bold text-uppercase d-flex justify-content-center text-white">HERRAMIENTAS</h1>
         <!-- Tarjeta 1 -->
         <div class="col-md-4">
-            <div class="card text-white  h-100" style="background-color: #191919;">
+            <div class="card text-white bg-dark h-100">
                 <div class="card-body text-center">
-                    <img src="https://via.placeholder.com/100" alt="Single Elimination" class="mb-3">
+                    <img src="./img/iconcrews.webp" alt="Single Elimination" class="mb-3 rounded-circle">
                     <h5 class="card-title">Crew Battles</h5>
-                    <p class="card-text">Immediate elimination after losing a match.</p>
+                    <p class="card-text">Luchas por equipos donde los participantes son eliminados al perder un combate.</p>
                 </div>
             </div>
         </div>
         <!-- Tarjeta 2 -->
         <div class="col-md-4">
-            <div class="card text-white bg-dark h-100">
+            <div class="card text-white bg-dark h-100" >
                 <div class="card-body text-center">
-                    <img src="https://via.placeholder.com/100" alt="Double Elimination" class="mb-3">
+                    <img src="./img/iconbracket.webp" alt="Double Elimination" class="mb-3 rounded-circle">
                     <h5 class="card-title">Bracket</h5>
-                    <p class="card-text">Elimination after losing two matches.</p>
+                    <p class="card-text">Competencia con eliminación directa o doble, avanzando tras cada victoria.</p>
                 </div>
             </div>
         </div>
@@ -245,9 +186,9 @@
         <div class="col-md-4">
             <div class="card text-white bg-dark h-100">
                 <div class="card-body text-center">
-                    <img src="https://via.placeholder.com/100" alt="Free For All" class="mb-3">
+                    <img src="./img/iconbaneos.webp" alt="Free For All" class="mb-3 rounded-circle">
                     <h5 class="card-title">Baneos</h5>
-                    <p class="card-text">Compete against several participants at once in each match.</p>
+                    <p class="card-text">Selección estratégica de escenarios permitidos o restringidos en cada partida.</p>
                 </div>
             </div>
         </div>
@@ -255,9 +196,9 @@
         <div class="col-md-4">
             <div class="card text-white bg-dark h-100">
                 <div class="card-body text-center">
-                    <img src="https://via.placeholder.com/100" alt="Round Robin" class="mb-3">
+                    <img src="./img/icontop8.webp" alt="Round Robin" class="mb-3 rounded-circle">
                     <h5 class="card-title">Generador top 8</h5>
-                    <p class="card-text">Face off against all participants, one at a time.</p>
+                    <p class="card-text">Herramienta para destacar a los ocho mejores jugadores del torneo.</p>
                 </div>
             </div>
         </div>
@@ -265,9 +206,9 @@
         <div class="col-md-4">
             <div class="card text-white bg-dark h-100">
                 <div class="card-body text-center">
-                    <img src="https://via.placeholder.com/100" alt="Swiss" class="mb-3">
+                    <img src="./img/icondivisiondinero.webp" alt="Swiss" class="mb-3 rounded-circle">
                     <h5 class="card-title">División de dinero</h5>
-                    <p class="card-text">Get paired against similar strength opponents each round based on cumulative scoring.</p>
+                    <p class="card-text">Herramienta para destacar a los ocho mejores jugadores del torneo.</p>
                 </div>
             </div>
         </div>
@@ -275,15 +216,65 @@
         <div class="col-md-4">
             <div class="card text-white bg-dark h-100">
                 <div class="card-body text-center">
-                    <img src="https://via.placeholder.com/100" alt="Leaderboard" class="mb-3">
+                    <img src="./img/iconmanual.webp" alt="Leaderboard" class="mb-3 rounded-circle">
                     <h5 class="card-title">Manual de torneos </h5>
-                    <p class="card-text">Compete for top rank, scored by whatever means you see fit.</p>
+                    <p class="card-text">Guía completa con reglas, formatos y lineamientos para organizar un torneo competitivo.</p>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <!--CARTAS EXPLICANDO HERRAMIENTAS-->
+
+
+
+<!--VIDEOS-->
+<section class="position-relative text-white py-5">
+    <!-- Fondo con brillo reducido -->
+    <div class="position-absolute top-0 start-0 w-100 h-100" style="background-image: url('./img/fondocondegradado.webp'); background-size: cover; background-position: center; filter: brightness(0.3); z-index: 0;"></div>
+
+    <!-- Contenido encima del fondo -->
+    <div class="container position-relative" style="z-index: 1;">
+        <div class="row">
+            <!-- Sección de la Imagen -->
+            <div class="col-md-6 position-relative">
+                <img src="./img/neov5.webp" class="img-fluid border border-white" alt="Smash Bros">
+            </div>
+
+            <!-- Sección de Texto -->
+            <div class="col-md-6 d-flex flex-column justify-content-center">
+                <div class="bg-black text-white fw-bold px-3 py-2 mb-3 text-center align-self-start">
+                    Video
+                </div>
+                <h2 class="fw-bold" style="text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); ">
+                    Los mejores jugadores están listos para demostrar quién será el campeón. Prepárate para los combates más intensos en Smash Bros Ultimate.
+                </h2>
+                <p style="text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);">¡ÚNETE A LA BATALLA! <span class="text-warning fw-bold" style="text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); ">BRACKET MASTER</span>!</p>
+                <a href="#" class="btn btn-light fw-bold px-4 py-2 mt-3">Mirar ahora</a>
+            </div>
+        </div>
+    </div>
+</section>
+<!--VIDEOS-->
+
+
+<!--DIVISION-->
+<div class="" style="background: linear-gradient(to right, rgb(76, 76, 76), rgb(255, 255, 255)); height: 5px; width: 100%;"></div>
+<!--DIVISION-->
+
+<!--CONTENERDOR IMAGEN - TEXTO-->
+<div class="container my-5 text-center" style="background: #121212; height: 400px;">
+    <div class="row align-items-center justify-content-center">     
+      <!-- Columna del texto -->
+      <div class="col-md-6">
+        <h2  class="fw-bold" style="color: aliceblue; font-size: 59px;">Tenemos lo que buscas
+        </h2>
+        <p       style="color: aliceblue;">La comunidad de los E-sports ha crecido de manera impresionante, conectando a millones de apasionados por los videojuegos y las competencias digitales. Nuestro objetivo es ser un aliado clave en tu desarrollo, ya sea como comunidad, organizador de eventos o jugador amateur, ofreciéndote herramientas prácticas y un espacio donde puedas destacar. Creemos que el éxito en los E-sports se basa en la colaboración, la dedicación y el apoyo mutuo. Juntos, construimos el futuro de los E-sports, un paso a la vez.</p>
+      </div>
+    </div>
+  </div>
+<!--CONTENERDOR IMAGEN - TEXTO-->  
+
 
 
      
@@ -358,10 +349,137 @@
       </div>
     <!--TARJETAS-->
 
+    <!---------DATOS ANIMADOS------------>
+    <!-- ESTADÍSTICAS ANIMADAS -->
+    <div id="stats" class="" style="position: relative; font-family: 'Chakra Petch', sans-serif; color: rgb(255, 255, 255);">
+        <!-- Imagen de fondo -->
+        <div>
+            <img src="./img/samus.jpg" style="width: 100%; height: 600px;">
+        </div>
+        <!-- Contenido superpuesto -->
+        <div class="row text-center" style="position: absolute; top: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; background-color: rgba(0, 0, 0, 0.5);">
+            <div class="col-md-3" style="margin-bottom: 20px;">
+                <div class="number" data-target="50" style="font-size: 100px; text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);">0</div>
+                <div class="label" style="font-size: 30px; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);">Torneos realizados</div>
+            </div>
+            <div class="col-md-3" style="margin-bottom: 20px;">
+                <div class="number" data-target="500" style="font-size: 100px; text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);">0</div>
+                <div class="label" style="font-size: 30px; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);">Participantes únicos</div>
+            </div>
+            <div class="col-md-3" style="margin-bottom: 20px;">
+                <div class="number" data-target="2000" style="font-size: 100px; text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);">0</div>
+                <div class="label" style="font-size: 30px; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);">Batallas jugadas</div>
+            </div>
+            <div class="col-md-3" style="margin-bottom: 20px;">
+                <div class="number" data-target="100" style="font-size: 100px; text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);">0</div>
+                <div class="label" style="font-size: 30px; text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);">Premios entregados</div>
+            </div>
+        </div>
+    </div>    
+    <!-- ESTADÍSTICAS ANIMADAS -->
 
-    
-    
+    <script>
+        // Función para reiniciar y activar la animación de conteo
+        const handleVisibility = (entries) => {
+            entries.forEach(entry => {
+                const counters = document.querySelectorAll('.number');
 
+                if (entry.isIntersecting) {
+                    // Comienza la animación cuando es visible
+                    counters.forEach(counter => {
+                        const target = +counter.getAttribute('data-target');
+                        counter.innerText = '0'; // Reiniciar a cero antes de animar
+                        const speed = 50;
+                        const updateCount = () => {
+                            const count = +counter.innerText;
+                            const increment = target / speed;
+
+                            if (count < target) {
+                                counter.innerText = Math.ceil(count + increment);
+                                setTimeout(updateCount, 30);
+                            } else {
+                                counter.innerText = target;
+                            }
+                        };
+                        updateCount();
+                    });
+                } else {
+                    // Reinicia los números a cero cuando deja de ser visible
+                    counters.forEach(counter => {
+                        counter.innerText = '0';
+                    });
+                }
+            });
+        };
+
+        // Crear el observador
+        const observer = new IntersectionObserver(handleVisibility, {
+            threshold: 0.5, // Detectar cuando al menos el 50% es visible
+        });
+
+        // Observa la sección de estadísticas
+        observer.observe(document.querySelector('#stats'));
+    </script>
+
+    <!--DATOS ANIMADOS-->
+
+    <!--FOOTER-->
+    <footer class="bg-dark text-white pt-5 pb-4">
+        <div class="container text-center text-md-start">
+            <div class="row">
+                <!-- Logo y Descripción -->
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase fw-bold">Bracket Master</h5>
+                    <p>El lugar donde los campeones de Smash Bros se encuentran. Torneos épicos y una comunidad apasionada.</p>
+                </div>
+    
+                <!-- Enlaces Rápidos -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase fw-bold">Enlaces</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white text-decoration-none">Inicio</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Torneos</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Resultados</a></li>
+                        <li><a href="#" class="text-white text-decoration-none">Contacto</a></li>
+                    </ul>
+                </div>
+    
+                <!-- Redes Sociales -->
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <h5 class="text-uppercase fw-bold">Síguenos</h5>
+                    <ul class="list-unstyled d-flex justify-content-start">
+                        <li class="me-3"><a href="#" class="text-white text-decoration-none"><i class="fab fa-facebook fa-lg"></i></a></li>
+                        <li class="me-3"><a href="#" class="text-white text-decoration-none"><i class="fab fa-twitter fa-lg"></i></a></li>
+                        <li class="me-3"><a href="#" class="text-white text-decoration-none"><i class="fab fa-instagram fa-lg"></i></a></li>
+                        <li><a href="#" class="text-white text-decoration-none"><i class="fab fa-discord fa-lg"></i></a></li>
+                    </ul>
+                </div>
+    
+                <!-- Suscripción -->
+                <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mt-3">
+                    <h5 class="text-uppercase fw-bold">Mantente informado</h5>
+                    <form>
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Correo electrónico" aria-label="Correo electrónico" aria-describedby="button-addon2">
+                            <button class="btn btn-danger" type="button" id="button-addon2">Suscribirse</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+    
+            <hr class="my-4 text-white">
+    
+            <!-- Copyright -->
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p class="mb-0">&copy; 2024 Bracket Master. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Font Awesome CDN -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <!-- Scripts de Bootstrap (opcional, pero necesario para algunas funcionalidades) -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
