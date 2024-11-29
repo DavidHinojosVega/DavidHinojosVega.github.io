@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bracket Generator</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="container py-5">
+        <h1 class="text-center mb-4">Bracket Generator</h1>
+        
+        <div class="card shadow-sm p-4 mb-4">
+            <h4 class="card-title">Add Participants</h4>
+            <textarea id="participants" class="form-control mb-3" rows="5" placeholder="Enter participants, one per line"></textarea>
+            <button id="generate" class="btn btn-primary w-100">Generate Bracket</button>
+        </div>
+
+        <div id="bracket-container" class="mt-4"></div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="bracket.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>

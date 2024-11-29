@@ -9,6 +9,25 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./CSS/estilosbaneos.css">
     <style>
+        body {
+            background-image: url(./img/fondohand.webp);
+            background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+            background-position: center; /* Centra la imagen */
+            background-repeat: no-repeat; /* Evita que la imagen se repita */
+            background-attachment: fixed; /* Fija la imagen al fondo */
+            
+        }
+        body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Color negro con 50% de opacidad */
+    z-index: -1; /* Coloca la sombra detrás del contenido */
+}
+
         .stage-button {
             border: none;
             background-color: transparent;
@@ -21,8 +40,9 @@
         }
 
         .stage-image {
-            width: 100%;
-            border-radius: 8px;
+            width: 75%; /* Ajusta el ancho */
+            height: auto; /* Mantén la proporción */
+            border-radius: 8px; /* Mantén el borde redondeado */
         }
 
         .baneado {
@@ -46,56 +66,56 @@
 <body>
     <div class="container">
         <!--HEADER-->
-    <header class="px-3" style="background-color: black;">
-        <nav class="navbar navbar-expand-lg fixed-top" style="background-color: black;">
-            <div class="container-fluid">
-                <a class="navbar-brand text-white" href="#"><img src="./img/bracketmaster.webp" alt="" style="height: 50px;"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0 px-3">
-                        <li class="nav-item">
-                            <a class="nav-link active text-white" aria-current="page" href="./index.html" style="padding-left: 20px; padding-right: 20px;">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#" style="padding-left: 20px; padding-right: 20px;">Crew Battles</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#" style="padding-left: 20px; padding-right: 20px;">Mini Bracket</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="./baneo.html" style="padding-left: 20px; padding-right: 20px;">Baneos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="./top8.html" style="padding-left: 20px; padding-right: 20px;">Generador top 8</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#" style="padding-left: 20px; padding-right: 20px;">Historia</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#" style="padding-left: 20px; padding-right: 20px;">Sorteos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="./dinero.html" style="padding-left: 20px; padding-right: 20px;">Dinero</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#" style="padding-left: 20px; padding-right: 20px;">Manual de torneos</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex" role="search">
-                        <button class="btn btn-outline-light" type="submit">Search</button>
-                    </form>
+        <header class="px-3" style="background-color: black;">
+            <nav class="navbar navbar-expand-lg fixed-top" style="background-color: black;">
+                <div class="container-fluid">
+                    <a class="navbar-brand text-white" href="#"><img src="./img/bracketmaster.webp" alt="" style="height: 50px;"></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 px-3">
+                            <li class="nav-item">
+                                <a class="nav-link active text-white" aria-current="page" href="./index.html" style="padding-left: 20px; padding-right: 20px;">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#" style="padding-left: 20px; padding-right: 20px;">Crew Battles</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#" style="padding-left: 20px; padding-right: 20px;">Mini Bracket</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="./baneo.html" style="padding-left: 20px; padding-right: 20px;">Baneos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="./top8.html" style="padding-left: 20px; padding-right: 20px;">Generador top 8</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#" style="padding-left: 20px; padding-right: 20px;">Historia</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#" style="padding-left: 20px; padding-right: 20px;">Sorteos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="./dinero.html" style="padding-left: 20px; padding-right: 20px;">Dinero</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#" style="padding-left: 20px; padding-right: 20px;">Manual de torneos</a>
+                            </li>
+                        </ul>
+                        <form class="d-flex" role="search">
+                            <button class="btn btn-outline-light" type="submit">Search</button>
+                        </form>
+                    </div>
                 </div>
-            </div>
-        </nav>
-    </header>
-    <!--HEADER-->
+            </nav>
+        </header>
+        <!--HEADER-->
     </div>
 
     <!-- Contenedor de escenarios -->
     <div class="container my-5">
-        <h1 class="text-center mb-4">Selecciona un escenario</h1>
+        <div style="height: 70px;"></div>
         <div id="status-message" class="text-center status-message"></div>
         <div class="row">
             <!-- Escenarios -->
@@ -150,14 +170,10 @@
     <div class="text-center mt-4">
         <button id="next-phase-btn" class="btn btn-primary" onclick="nextPhase()">Pasar a la siguiente fase</button>
     </div>
-    
 
     <!-- Bootstrap JS -->
     <script src="./js/baneos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Script para manejar lógica -->
-    
 </body>
 
 </html>
